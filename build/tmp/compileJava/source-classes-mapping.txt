@@ -6,3 +6,5 @@ MethodHandler.java
  MethodHandler
 performance/ConstantCallSite.java
  performance.ConstantCallSite
+performance/MutableCallSite.java
+ performance.MutableCallSite
