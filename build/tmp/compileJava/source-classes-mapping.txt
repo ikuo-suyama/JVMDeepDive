@@ -8,3 +8,5 @@ performance/ConstantCallSite.java
  performance.ConstantCallSite
 performance/MutableCallSite.java
  performance.MutableCallSite
+InvokeDynamicSimple.java
+ InvokeDynamicSimple
