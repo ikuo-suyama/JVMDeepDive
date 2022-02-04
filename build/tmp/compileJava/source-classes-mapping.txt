@@ -1,19 +1,21 @@
-Invokes.java
- Invokes
-InvokeDynamic.java
- InvokeDynamic
-MethodHandler.java
- MethodHandler
-performance/ConstantCallSite.java
- performance.ConstantCallSite
-performance/MutableCallSite.java
- performance.MutableCallSite
-InvokeDynamicStackTrace.java
- InvokeDynamicStackTrace
-InvokeLambdaByHandler.java
- InvokeLambdaByHandler
 InvokeDynamicFunction.java
  InvokeDynamicFunction
  InvokeDynamicFunction$Sam
+InvokeDynamic.java
+ InvokeDynamic
+performance/ConstantCallSite.java
+ performance.ConstantCallSite
+InvokeLambdaByHandler.java
+ InvokeLambdaByHandler
 InvokeDynamicSimple.java
  InvokeDynamicSimple
+Invokes.java
+ Invokes
+InvokeDynamicStackTrace.java
+ InvokeDynamicStackTrace
+performance/MutableCallSite.java
+ performance.MutableCallSite
+MethodHandler.java
+ MethodHandler
+InvokeDynamicComplicated.java
+ InvokeDynamicComplicated
