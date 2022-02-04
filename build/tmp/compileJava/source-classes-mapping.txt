@@ -8,5 +8,12 @@ performance/ConstantCallSite.java
  performance.ConstantCallSite
 performance/MutableCallSite.java
  performance.MutableCallSite
+InvokeDynamicStackTrace.java
+ InvokeDynamicStackTrace
+InvokeLambdaByHandler.java
+ InvokeLambdaByHandler
+InvokeDynamicFunction.java
+ InvokeDynamicFunction
+ InvokeDynamicFunction$Sam
 InvokeDynamicSimple.java
  InvokeDynamicSimple
