@@ -1,116 +1,46 @@
-Classfile /Users/ikuo.suyama/src/JVMDeepDive/src/main/java/invoke/others/Invokes.class
-  Last modified 2022/02/06; size 561 bytes
-  MD5 checksum a04481d4a84763d31cfd33c8aa324fea
-  Compiled from "Invokes.java"
-public class invoke.others.Invokes implements invoke.others.IInvoke
-  minor version: 0
-  major version: 55
-  flags: (0x0021) ACC_PUBLIC, ACC_SUPER
-  this_class: #3                          // invoke/others/Invokes
-  super_class: #7                         // java/lang/Object
-  interfaces: 1, fields: 0, methods: 5, attributes: 1
-Constant pool:
-   #1 = Methodref          #7.#21         // java/lang/Object."<init>":()V
-   #2 = Methodref          #3.#22         // invoke/others/Invokes.staticMethod:(I)I
-   #3 = Class              #23            // invoke/others/Invokes
-   #4 = Methodref          #3.#21         // invoke/others/Invokes."<init>":()V
-   #5 = Methodref          #3.#24         // invoke/others/Invokes.method:(I)I
-   #6 = InterfaceMethodref #8.#25         // invoke/others/IInvoke.interfaceMethod:(I)I
-   #7 = Class              #26            // java/lang/Object
-   #8 = Class              #27            // invoke/others/IInvoke
-   #9 = Utf8               <init>
-  #10 = Utf8               ()V
-  #11 = Utf8               Code
-  #12 = Utf8               LineNumberTable
-  #13 = Utf8               main
-  #14 = Utf8               ([Ljava/lang/String;)V
-  #15 = Utf8               method
-  #16 = Utf8               (I)I
-  #17 = Utf8               staticMethod
-  #18 = Utf8               interfaceMethod
-  #19 = Utf8               SourceFile
-  #20 = Utf8               Invokes.java
-  #21 = NameAndType        #9:#10         // "<init>":()V
-  #22 = NameAndType        #17:#16        // staticMethod:(I)I
-  #23 = Utf8               invoke/others/Invokes
-  #24 = NameAndType        #15:#16        // method:(I)I
-  #25 = NameAndType        #18:#16        // interfaceMethod:(I)I
-  #26 = Utf8               java/lang/Object
-  #27 = Utf8               invoke/others/IInvoke
-{
+Compiled from "Invokes.java"
+public class invoke.others.Invokes implements invoke.others.IInvoke {
   public invoke.others.Invokes();
-    descriptor: ()V
-    flags: (0x0001) ACC_PUBLIC
     Code:
-      stack=1, locals=1, args_size=1
-         0: aload_0
-         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
-         4: return
-      LineNumberTable:
-        line 3: 0
+       0: aload_0
+       1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+       4: return
 
   public static void main(java.lang.String[]);
-    descriptor: ([Ljava/lang/String;)V
-    flags: (0x0009) ACC_PUBLIC, ACC_STATIC
     Code:
-      stack=2, locals=4, args_size=1
-         0: iconst_1
-         1: istore_1
-         2: iload_1
-         3: invokestatic  #2                  // Method staticMethod:(I)I
-         6: pop
-         7: new           #3                  // class invoke/others/Invokes
-        10: dup
-        11: invokespecial #4                  // Method "<init>":()V
-        14: astore_2
-        15: aload_2
-        16: iload_1
-        17: invokevirtual #5                  // Method method:(I)I
-        20: pop
-        21: aload_2
-        22: astore_3
-        23: aload_3
-        24: iload_1
-        25: invokeinterface #6,  2            // InterfaceMethod invoke/others/IInvoke.interfaceMethod:(I)I
-        30: pop
-        31: return
-      LineNumberTable:
-        line 5: 0
-        line 6: 2
-        line 7: 7
-        line 8: 15
-        line 9: 21
-        line 10: 23
-        line 11: 31
+       0: iconst_1
+       1: istore_1
+       2: iload_1
+       3: invokestatic  #2                  // Method staticMethod:(I)I
+       6: pop
+       7: new           #3                  // class invoke/others/Invokes
+      10: dup
+      11: invokespecial #4                  // Method "<init>":()V
+      14: astore_2
+      15: aload_2
+      16: iload_1
+      17: invokevirtual #5                  // Method method:(I)I
+      20: pop
+      21: aload_2
+      22: astore_3
+      23: aload_3
+      24: iload_1
+      25: invokeinterface #6,  2            // InterfaceMethod invoke/others/IInvoke.interfaceMethod:(I)I
+      30: pop
+      31: return
 
   public int method(int);
-    descriptor: (I)I
-    flags: (0x0001) ACC_PUBLIC
     Code:
-      stack=1, locals=2, args_size=2
-         0: iload_1
-         1: ireturn
-      LineNumberTable:
-        line 14: 0
+       0: iload_1
+       1: ireturn
 
   public static int staticMethod(int);
-    descriptor: (I)I
-    flags: (0x0009) ACC_PUBLIC, ACC_STATIC
     Code:
-      stack=1, locals=1, args_size=1
-         0: iload_0
-         1: ireturn
-      LineNumberTable:
-        line 17: 0
+       0: iload_0
+       1: ireturn
 
   public int interfaceMethod(int);
-    descriptor: (I)I
-    flags: (0x0001) ACC_PUBLIC
     Code:
-      stack=1, locals=2, args_size=2
-         0: iload_1
-         1: ireturn
-      LineNumberTable:
-        line 21: 0
+       0: iload_1
+       1: ireturn
 }
-SourceFile: "Invokes.java"
