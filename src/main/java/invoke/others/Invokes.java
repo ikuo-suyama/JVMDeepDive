@@ -1,14 +1,30 @@
 package invoke.others;
 
-import java.util.HashMap;
-import java.util.Map;
-
-public class Invokes {
+public class Invokes implements IInvoke {
     public static void main(String[] args) {
-        long time = System.currentTimeMillis();
-        HashMap<String, String> hm = new HashMap<>();
-        hm.put("now", "bar");
-        Map<String, String> m = hm;
-        m.put("foo", "baz");
+        int i = 1;
+        Invokes.staticMethod(i);
+        Invokes invs = new Invokes();
+        invs.privateMethod(i);
+        invs.method(i);
+        invs.interfaceMethod(i);
     }
+
+    private int privateMethod(int i) {
+        return i;
+    }
+    public int method(int i) {
+        return i;
+    }
+    public static int staticMethod(int i) {
+        return i;
+    }
+    @Override
+    public int interfaceMethod(int i) {
+        return i;
+    }
+}
+
+interface IInvoke {
+    int interfaceMethod(int i);
 }
