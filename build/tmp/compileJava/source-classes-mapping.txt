@@ -19,3 +19,6 @@ MethodHandler.java
  MethodHandler
 InvokeDynamicComplicated.java
  InvokeDynamicComplicated
+InvokeDynamicComplicatedTypeErase.java
+ InvokeDynamicComplicatedTypeErase
+ InvokeDynamicComplicatedTypeErase$SAM
