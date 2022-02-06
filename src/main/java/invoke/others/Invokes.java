@@ -5,14 +5,11 @@ public class Invokes implements IInvoke {
         int i = 1;
         Invokes.staticMethod(i);
         Invokes invs = new Invokes();
-        invs.privateMethod(i);
         invs.method(i);
-        invs.interfaceMethod(i);
+        IInvoke iinvs = invs;
+        iinvs.interfaceMethod(i);
     }
 
-    private int privateMethod(int i) {
-        return i;
-    }
     public int method(int i) {
         return i;
     }
