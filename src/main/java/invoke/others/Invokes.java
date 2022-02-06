@@ -10,16 +10,10 @@ public class Invokes implements IInvoke {
         iinvs.interfaceMethod(i);
     }
 
-    public int method(int i) {
-        return i;
-    }
-    public static int staticMethod(int i) {
-        return i;
-    }
+    public int method(int i) { return i; }
+    public static int staticMethod(int i) { return i; }
     @Override
-    public int interfaceMethod(int i) {
-        return i;
-    }
+    public int interfaceMethod(int i) { return i; }
 }
 
 interface IInvoke {
