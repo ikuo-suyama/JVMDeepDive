@@ -1,24 +1,29 @@
-InvokeDynamicFunction.java
- InvokeDynamicFunction
- InvokeDynamicFunction$Sam
-InvokeDynamic.java
- InvokeDynamic
-performance/ConstantCallSite.java
- performance.ConstantCallSite
-InvokeLambdaByHandler.java
- InvokeLambdaByHandler
-InvokeDynamicSimple.java
- InvokeDynamicSimple
-Invokes.java
- Invokes
-InvokeDynamicStackTrace.java
- InvokeDynamicStackTrace
-performance/MutableCallSite.java
- performance.MutableCallSite
-MethodHandler.java
- MethodHandler
-InvokeDynamicComplicated.java
- InvokeDynamicComplicated
-InvokeDynamicComplicatedTypeErase.java
- InvokeDynamicComplicatedTypeErase
- InvokeDynamicComplicatedTypeErase$SAM
+invoke/dynamic/InvokeDynamicFunction.java
+ invoke.dynamic.InvokeDynamicFunction
+ invoke.dynamic.InvokeDynamicFunction$Sam
+invoke/dynamic/InvokeDynamic.java
+ invoke.dynamic.InvokeDynamic
+invoke/others/performance/ConstantCallSite.java
+ invoke.others.performance.ConstantCallSite
+invoke/dynamic/InvokeDynamicSimple.java
+ invoke.dynamic.InvokeDynamicSimple
+invoke/others/MethodInvoc.java
+ invoke.others.MethodInvoc
+invoke/dynamic/InvokeLambdaByHandler.java
+ invoke.dynamic.InvokeLambdaByHandler
+innerclass/InnerClassTest.java
+ innerclass.InnerClassTest
+invoke/dynamic/InvokeDynamicStackTrace.java
+ invoke.dynamic.InvokeDynamicStackTrace
+invoke/dynamic/InvokeDynamicComplicated.java
+ invoke.dynamic.InvokeDynamicComplicated
+invoke/others/performance/MutableCallSite.java
+ invoke.others.performance.MutableCallSite
+invoke/others/Invokes.java
+ invoke.others.IInvoke
+ invoke.others.Invokes
+invoke/dynamic/InvokeDynamicComplicatedTypeErase.java
+ invoke.dynamic.InvokeDynamicComplicatedTypeErase
+ invoke.dynamic.InvokeDynamicComplicatedTypeErase$SAM
+invoke/dynamic/InvokeViaCallSite.java
+ invoke.dynamic.InvokeViaCallSite
