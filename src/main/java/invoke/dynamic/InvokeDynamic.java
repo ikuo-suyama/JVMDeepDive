@@ -1,3 +1,5 @@
+package invoke.dynamic;
+
 public class InvokeDynamic {
     private static final String HELLO = "Hello";
     public static void main(String[] args) throws Exception {

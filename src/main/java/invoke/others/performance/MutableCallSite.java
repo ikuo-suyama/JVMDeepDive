@@ -1,9 +1,9 @@
-package performance;
+package invoke.others.performance;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class ConstantCallSite {
+public class MutableCallSite {
     public static void main(String[] args) {
         List<Long> results = new ArrayList<>();
         for (int i = 0; i < 10; i++) {
@@ -18,7 +18,8 @@ public class ConstantCallSite {
     public static long exec() {
         long start = System.currentTimeMillis();
         for (int i = 0; i < 100000; i++) {
-            Runnable r = () -> System.out.print("Hello");
+            int finalI = i;
+            Runnable r = () -> System.out.print("Hello" + finalI);
             r.run();
         }
         return System.currentTimeMillis() - start;

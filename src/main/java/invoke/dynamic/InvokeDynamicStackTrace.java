@@ -1,3 +1,5 @@
+package invoke.dynamic;
+
 public class InvokeDynamicStackTrace {
     public static void main(String[] args) {
         System.out.println("test");

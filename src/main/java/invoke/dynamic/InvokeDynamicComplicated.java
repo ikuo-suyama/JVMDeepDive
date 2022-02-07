@@ -1,3 +1,5 @@
+package invoke.dynamic;
+
 import java.util.function.Function;
 
 public class InvokeDynamicComplicated {
