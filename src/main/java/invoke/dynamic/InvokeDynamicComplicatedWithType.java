@@ -1,6 +1,6 @@
 package invoke.dynamic;
 
-public class InvokeDynamicComplicatedTypeErase {
+public class InvokeDynamicComplicatedWithType {
     public static void main(String[] args) {
         long l = 10L;
         SAM f = (i) -> (double) i / (double) l;

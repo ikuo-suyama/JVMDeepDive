@@ -1,0 +1,119 @@
+Classfile /Users/ikuo.suyama/src/JVMDeepDive/src/main/java/invoke/dynamic/InvokeDynamicComplicatedWithType.class
+  Last modified 2022/02/09; size 1299 bytes
+  MD5 checksum ffa535ca23fccde5c338d9fd0477b3d3
+  Compiled from "InvokeDynamicComplicatedWithType.java"
+public class invoke.dynamic.InvokeDynamicComplicatedWithType
+  minor version: 0
+  major version: 55
+  flags: (0x0021) ACC_PUBLIC, ACC_SUPER
+  this_class: #9                          // invoke/dynamic/InvokeDynamicComplicatedWithType
+  super_class: #10                        // java/lang/Object
+  interfaces: 0, fields: 0, methods: 3, attributes: 4
+Constant pool:
+   #1 = Methodref          #10.#25        // java/lang/Object."<init>":()V
+   #2 = Long               10l
+   #4 = InvokeDynamic      #0:#30         // #0:apply:(J)Linvoke/dynamic/InvokeDynamicComplicatedWithType$SAM;
+   #5 = Methodref          #31.#32        // java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+   #6 = InterfaceMethodref #11.#33        // invoke/dynamic/InvokeDynamicComplicatedWithType$SAM.apply:(Ljava/lang/Integer;)Ljava/lang/Double;
+   #7 = Methodref          #31.#34        // java/lang/Integer.intValue:()I
+   #8 = Methodref          #35.#36        // java/lang/Double.valueOf:(D)Ljava/lang/Double;
+   #9 = Class              #37            // invoke/dynamic/InvokeDynamicComplicatedWithType
+  #10 = Class              #38            // java/lang/Object
+  #11 = Class              #39            // invoke/dynamic/InvokeDynamicComplicatedWithType$SAM
+  #12 = Utf8               SAM
+  #13 = Utf8               InnerClasses
+  #14 = Utf8               <init>
+  #15 = Utf8               ()V
+  #16 = Utf8               Code
+  #17 = Utf8               LineNumberTable
+  #18 = Utf8               main
+  #19 = Utf8               ([Ljava/lang/String;)V
+  #20 = Utf8               lambda$main$0
+  #21 = Utf8               (JLjava/lang/Integer;)Ljava/lang/Double;
+  #22 = Utf8               SourceFile
+  #23 = Utf8               InvokeDynamicComplicatedWithType.java
+  #24 = Utf8               NestMembers
+  #25 = NameAndType        #14:#15        // "<init>":()V
+  #26 = Utf8               BootstrapMethods
+  #27 = MethodHandle       6:#40          // REF_invokeStatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+  #28 = MethodType         #41            //  (Ljava/lang/Integer;)Ljava/lang/Double;
+  #29 = MethodHandle       6:#42          // REF_invokeStatic invoke/dynamic/InvokeDynamicComplicatedWithType.lambda$main$0:(JLjava/lang/Integer;)Ljava/lang/Double;
+  #30 = NameAndType        #43:#44        // apply:(J)Linvoke/dynamic/InvokeDynamicComplicatedWithType$SAM;
+  #31 = Class              #45            // java/lang/Integer
+  #32 = NameAndType        #46:#47        // valueOf:(I)Ljava/lang/Integer;
+  #33 = NameAndType        #43:#41        // apply:(Ljava/lang/Integer;)Ljava/lang/Double;
+  #34 = NameAndType        #48:#49        // intValue:()I
+  #35 = Class              #50            // java/lang/Double
+  #36 = NameAndType        #46:#51        // valueOf:(D)Ljava/lang/Double;
+  #37 = Utf8               invoke/dynamic/InvokeDynamicComplicatedWithType
+  #38 = Utf8               java/lang/Object
+  #39 = Utf8               invoke/dynamic/InvokeDynamicComplicatedWithType$SAM
+  #40 = Methodref          #52.#53        // java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+  #41 = Utf8               (Ljava/lang/Integer;)Ljava/lang/Double;
+  #42 = Methodref          #9.#54         // invoke/dynamic/InvokeDynamicComplicatedWithType.lambda$main$0:(JLjava/lang/Integer;)Ljava/lang/Double;
+  #43 = Utf8               apply
+  #44 = Utf8               (J)Linvoke/dynamic/InvokeDynamicComplicatedWithType$SAM;
+  #45 = Utf8               java/lang/Integer
+  #46 = Utf8               valueOf
+  #47 = Utf8               (I)Ljava/lang/Integer;
+  #48 = Utf8               intValue
+  #49 = Utf8               ()I
+  #50 = Utf8               java/lang/Double
+  #51 = Utf8               (D)Ljava/lang/Double;
+  #52 = Class              #55            // java/lang/invoke/LambdaMetafactory
+  #53 = NameAndType        #56:#59        // metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+  #54 = NameAndType        #20:#21        // lambda$main$0:(JLjava/lang/Integer;)Ljava/lang/Double;
+  #55 = Utf8               java/lang/invoke/LambdaMetafactory
+  #56 = Utf8               metafactory
+  #57 = Class              #61            // java/lang/invoke/MethodHandles$Lookup
+  #58 = Utf8               Lookup
+  #59 = Utf8               (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+  #60 = Class              #62            // java/lang/invoke/MethodHandles
+  #61 = Utf8               java/lang/invoke/MethodHandles$Lookup
+  #62 = Utf8               java/lang/invoke/MethodHandles
+{
+  public invoke.dynamic.InvokeDynamicComplicatedWithType();
+    descriptor: ()V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: return
+      LineNumberTable:
+        line 3: 0
+
+  public static void main(java.lang.String[]);
+    descriptor: ([Ljava/lang/String;)V
+    flags: (0x0009) ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=2, locals=4, args_size=1
+         0: ldc2_w        #2                  // long 10l
+         3: lstore_1
+         4: lload_1
+         5: invokedynamic #4,  0              // InvokeDynamic #0:apply:(J)Linvoke/dynamic/InvokeDynamicComplicatedWithType$SAM;
+        10: astore_3
+        11: aload_3
+        12: iconst_1
+        13: invokestatic  #5                  // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+        16: invokeinterface #6,  2            // InterfaceMethod invoke/dynamic/InvokeDynamicComplicatedWithType$SAM.apply:(Ljava/lang/Integer;)Ljava/lang/Double;
+        21: pop
+        22: return
+      LineNumberTable:
+        line 5: 0
+        line 6: 4
+        line 7: 11
+        line 8: 22
+}
+SourceFile: "InvokeDynamicComplicatedWithType.java"
+NestMembers:
+  invoke/dynamic/InvokeDynamicComplicatedWithType$SAM
+InnerClasses:
+  static #12= #11 of #9;                  // SAM=class invoke/dynamic/InvokeDynamicComplicatedWithType$SAM of class invoke/dynamic/InvokeDynamicComplicatedWithType
+  public static final #58= #57 of #60;    // Lookup=class java/lang/invoke/MethodHandles$Lookup of class java/lang/invoke/MethodHandles
+BootstrapMethods:
+  0: #27 REF_invokeStatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #28 (Ljava/lang/Integer;)Ljava/lang/Double;
+      #29 REF_invokeStatic invoke/dynamic/InvokeDynamicComplicatedWithType.lambda$main$0:(JLjava/lang/Integer;)Ljava/lang/Double;
+      #28 (Ljava/lang/Integer;)Ljava/lang/Double;
