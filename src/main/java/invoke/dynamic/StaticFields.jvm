@@ -1,0 +1,68 @@
+Classfile /Users/ikuo.suyama/src/JVMDeepDive/src/main/java/invoke/dynamic/StaticFields.class
+  Last modified 2022/02/09; size 511 bytes
+  MD5 checksum ebd397d0b12054deb7a31f1fab284a23
+  Compiled from "StaticFields.java"
+public class invoke.dynamic.StaticFields
+  minor version: 0
+  major version: 55
+  flags: (0x0021) ACC_PUBLIC, ACC_SUPER
+  this_class: #4                          // invoke/dynamic/StaticFields
+  super_class: #5                         // java/lang/Object
+  interfaces: 0, fields: 1, methods: 2, attributes: 2
+Constant pool:
+   #1 = Methodref          #5.#18         // java/lang/Object."<init>":()V
+   #2 = Methodref          #19.#20        // java/lang/invoke/MethodHandles.lookup:()Ljava/lang/invoke/MethodHandles$Lookup;
+   #3 = Fieldref           #4.#21         // invoke/dynamic/StaticFields.lookup:Ljava/lang/invoke/MethodHandles$Lookup;
+   #4 = Class              #22            // invoke/dynamic/StaticFields
+   #5 = Class              #23            // java/lang/Object
+   #6 = Utf8               lookup
+   #7 = Class              #24            // java/lang/invoke/MethodHandles$Lookup
+   #8 = Utf8               Lookup
+   #9 = Utf8               InnerClasses
+  #10 = Utf8               Ljava/lang/invoke/MethodHandles$Lookup;
+  #11 = Utf8               <init>
+  #12 = Utf8               ()V
+  #13 = Utf8               Code
+  #14 = Utf8               LineNumberTable
+  #15 = Utf8               <clinit>
+  #16 = Utf8               SourceFile
+  #17 = Utf8               StaticFields.java
+  #18 = NameAndType        #11:#12        // "<init>":()V
+  #19 = Class              #25            // java/lang/invoke/MethodHandles
+  #20 = NameAndType        #6:#26         // lookup:()Ljava/lang/invoke/MethodHandles$Lookup;
+  #21 = NameAndType        #6:#10         // lookup:Ljava/lang/invoke/MethodHandles$Lookup;
+  #22 = Utf8               invoke/dynamic/StaticFields
+  #23 = Utf8               java/lang/Object
+  #24 = Utf8               java/lang/invoke/MethodHandles$Lookup
+  #25 = Utf8               java/lang/invoke/MethodHandles
+  #26 = Utf8               ()Ljava/lang/invoke/MethodHandles$Lookup;
+{
+  private static final java.lang.invoke.MethodHandles$Lookup lookup;
+    descriptor: Ljava/lang/invoke/MethodHandles$Lookup;
+    flags: (0x001a) ACC_PRIVATE, ACC_STATIC, ACC_FINAL
+
+  public invoke.dynamic.StaticFields();
+    descriptor: ()V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: return
+      LineNumberTable:
+        line 5: 0
+
+  static {};
+    descriptor: ()V
+    flags: (0x0008) ACC_STATIC
+    Code:
+      stack=1, locals=0, args_size=0
+         0: invokestatic  #2                  // Method java/lang/invoke/MethodHandles.lookup:()Ljava/lang/invoke/MethodHandles$Lookup;
+         3: putstatic     #3                  // Field lookup:Ljava/lang/invoke/MethodHandles$Lookup;
+         6: return
+      LineNumberTable:
+        line 6: 0
+}
+SourceFile: "StaticFields.java"
+InnerClasses:
+  public static final #8= #7 of #19;      // Lookup=class java/lang/invoke/MethodHandles$Lookup of class java/lang/invoke/MethodHandles

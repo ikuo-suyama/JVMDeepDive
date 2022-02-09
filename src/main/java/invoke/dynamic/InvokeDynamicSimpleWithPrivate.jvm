@@ -1,0 +1,115 @@
+Classfile /Users/ikuo.suyama/src/JVMDeepDive/src/main/java/invoke/dynamic/InvokeDynamicSimple.class
+  Last modified 2022/02/07; size 1046 bytes
+  MD5 checksum 222923930e27106708f2f570651bc411
+  Compiled from "InvokeDynamicSimple.java"
+public class invoke.dynamic.InvokeDynamicSimple
+  minor version: 0
+  major version: 55
+  flags: (0x0021) ACC_PUBLIC, ACC_SUPER
+  this_class: #7                          // invoke/dynamic/InvokeDynamicSimple
+  super_class: #8                         // java/lang/Object
+  interfaces: 0, fields: 0, methods: 3, attributes: 3
+Constant pool:
+   #1 = Methodref          #8.#18         // java/lang/Object."<init>":()V
+   #2 = InvokeDynamic      #0:#23         // #0:run:()Ljava/lang/Runnable;
+   #3 = InterfaceMethodref #24.#25        // java/lang/Runnable.run:()V
+   #4 = Fieldref           #26.#27        // java/lang/System.out:Ljava/io/PrintStream;
+   #5 = String             #28            // Hello
+   #6 = Methodref          #29.#30        // java/io/PrintStream.println:(Ljava/lang/String;)V
+   #7 = Class              #31            // invoke/dynamic/InvokeDynamicSimple
+   #8 = Class              #32            // java/lang/Object
+   #9 = Utf8               <init>
+  #10 = Utf8               ()V
+  #11 = Utf8               Code
+  #12 = Utf8               LineNumberTable
+  #13 = Utf8               main
+  #14 = Utf8               ([Ljava/lang/String;)V
+  #15 = Utf8               lambda$main$0
+  #16 = Utf8               SourceFile
+  #17 = Utf8               InvokeDynamicSimple.java
+  #18 = NameAndType        #9:#10         // "<init>":()V
+  #19 = Utf8               BootstrapMethods
+  #20 = MethodHandle       6:#33          // REF_invokeStatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+  #21 = MethodType         #10            //  ()V
+  #22 = MethodHandle       6:#34          // REF_invokeStatic invoke/dynamic/InvokeDynamicSimple.lambda$main$0:()V
+  #23 = NameAndType        #35:#36        // run:()Ljava/lang/Runnable;
+  #24 = Class              #37            // java/lang/Runnable
+  #25 = NameAndType        #35:#10        // run:()V
+  #26 = Class              #38            // java/lang/System
+  #27 = NameAndType        #39:#40        // out:Ljava/io/PrintStream;
+  #28 = Utf8               Hello
+  #29 = Class              #41            // java/io/PrintStream
+  #30 = NameAndType        #42:#43        // println:(Ljava/lang/String;)V
+  #31 = Utf8               invoke/dynamic/InvokeDynamicSimple
+  #32 = Utf8               java/lang/Object
+  #33 = Methodref          #44.#45        // java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+  #34 = Methodref          #7.#46         // invoke/dynamic/InvokeDynamicSimple.lambda$main$0:()V
+  #35 = Utf8               run
+  #36 = Utf8               ()Ljava/lang/Runnable;
+  #37 = Utf8               java/lang/Runnable
+  #38 = Utf8               java/lang/System
+  #39 = Utf8               out
+  #40 = Utf8               Ljava/io/PrintStream;
+  #41 = Utf8               java/io/PrintStream
+  #42 = Utf8               println
+  #43 = Utf8               (Ljava/lang/String;)V
+  #44 = Class              #47            // java/lang/invoke/LambdaMetafactory
+  #45 = NameAndType        #48:#52        // metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+  #46 = NameAndType        #15:#10        // lambda$main$0:()V
+  #47 = Utf8               java/lang/invoke/LambdaMetafactory
+  #48 = Utf8               metafactory
+  #49 = Class              #54            // java/lang/invoke/MethodHandles$Lookup
+  #50 = Utf8               Lookup
+  #51 = Utf8               InnerClasses
+  #52 = Utf8               (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+  #53 = Class              #55            // java/lang/invoke/MethodHandles
+  #54 = Utf8               java/lang/invoke/MethodHandles$Lookup
+  #55 = Utf8               java/lang/invoke/MethodHandles
+{
+  public invoke.dynamic.InvokeDynamicSimple();
+    descriptor: ()V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: return
+      LineNumberTable:
+        line 3: 0
+
+  public static void main(java.lang.String[]);
+    descriptor: ([Ljava/lang/String;)V
+    flags: (0x0009) ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=1, locals=2, args_size=1
+         0: invokedynamic #2,  0              // InvokeDynamic #0:run:()Ljava/lang/Runnable;
+         5: astore_1
+         6: aload_1
+         7: invokeinterface #3,  1            // InterfaceMethod java/lang/Runnable.run:()V
+        12: return
+      LineNumberTable:
+        line 5: 0
+        line 6: 6
+        line 7: 12
+
+  private static void lambda$main$0();
+    descriptor: ()V
+    flags: (0x100a) ACC_PRIVATE, ACC_STATIC, ACC_SYNTHETIC
+    Code:
+      stack=2, locals=0, args_size=0
+         0: getstatic     #4                  // Field java/lang/System.out:Ljava/io/PrintStream;
+         3: ldc           #5                  // String Hello
+         5: invokevirtual #6                  // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+         8: return
+      LineNumberTable:
+        line 5: 0
+}
+SourceFile: "InvokeDynamicSimple.java"
+InnerClasses:
+  public static final #50= #49 of #53;    // Lookup=class java/lang/invoke/MethodHandles$Lookup of class java/lang/invoke/MethodHandles
+BootstrapMethods:
+  0: #20 REF_invokeStatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #21 ()V
+      #22 REF_invokeStatic invoke/dynamic/InvokeDynamicSimple.lambda$main$0:()V
+      #21 ()V
