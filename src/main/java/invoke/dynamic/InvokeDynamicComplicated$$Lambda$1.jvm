@@ -1,0 +1,86 @@
+Classfile /Users/ikuo.suyama/src/JVMDeepDive/src/main/java/invoke/dynamic/InvokeDynamicComplicated$$Lambda$1.class
+  Last modified 2022/02/04; size 607 bytes
+  MD5 checksum a83ee165c422e5a7af986caaa7dcf270
+final class InvokeDynamicComplicated$$Lambda$1 implements java.util.function.Function
+  minor version: 0
+  major version: 52
+  flags: (0x1030) ACC_FINAL, ACC_SUPER, ACC_SYNTHETIC
+  this_class: #2                          // InvokeDynamicComplicated$$Lambda$1
+  super_class: #4                         // java/lang/Object
+  interfaces: 1, fields: 1, methods: 3, attributes: 0
+Constant pool:
+   #1 = Utf8               InvokeDynamicComplicated$$Lambda$1
+   #2 = Class              #1             // InvokeDynamicComplicated$$Lambda$1
+   #3 = Utf8               java/lang/Object
+   #4 = Class              #3             // java/lang/Object
+   #5 = Utf8               java/util/function/Function
+   #6 = Class              #5             // java/util/function/Function
+   #7 = Utf8               arg$1
+   #8 = Utf8               J
+   #9 = Utf8               <init>
+  #10 = Utf8               (J)V
+  #11 = Utf8               ()V
+  #12 = NameAndType        #9:#11         // "<init>":()V
+  #13 = Methodref          #4.#12         // java/lang/Object."<init>":()V
+  #14 = NameAndType        #7:#8          // arg$1:J
+  #15 = Fieldref           #2.#14         // InvokeDynamicComplicated$$Lambda$1.arg$1:J
+  #16 = Utf8               get$Lambda
+  #17 = Utf8               (J)Ljava/util/function/Function;
+  #18 = NameAndType        #9:#10         // "<init>":(J)V
+  #19 = Methodref          #2.#18         // InvokeDynamicComplicated$$Lambda$1."<init>":(J)V
+  #20 = Utf8               apply
+  #21 = Utf8               (Ljava/lang/Object;)Ljava/lang/Object;
+  #22 = Utf8               Ljava/lang/invoke/LambdaForm$Hidden;
+  #23 = Utf8               java/lang/Integer
+  #24 = Class              #23            // java/lang/Integer
+  #25 = Utf8               InvokeDynamicComplicated
+  #26 = Class              #25            // InvokeDynamicComplicated
+  #27 = Utf8               lambda$main$0
+  #28 = Utf8               (JLjava/lang/Integer;)Ljava/lang/Double;
+  #29 = NameAndType        #27:#28        // lambda$main$0:(JLjava/lang/Integer;)Ljava/lang/Double;
+  #30 = Methodref          #26.#29        // InvokeDynamicComplicated.lambda$main$0:(JLjava/lang/Integer;)Ljava/lang/Double;
+  #31 = Utf8               Code
+  #32 = Utf8               RuntimeVisibleAnnotations
+{
+  private final long arg$1;
+    descriptor: J
+    flags: (0x0012) ACC_PRIVATE, ACC_FINAL
+
+  private InvokeDynamicComplicated$$Lambda$1(long);
+    descriptor: (J)V
+    flags: (0x0002) ACC_PRIVATE
+    Code:
+      stack=3, locals=3, args_size=2
+         0: aload_0
+         1: invokespecial #13                 // Method java/lang/Object."<init>":()V
+         4: aload_0
+         5: lload_1
+         6: putfield      #15                 // Field arg$1:J
+         9: return
+
+  private static java.util.function.Function get$Lambda(long);
+    descriptor: (J)Ljava/util/function/Function;
+    flags: (0x000a) ACC_PRIVATE, ACC_STATIC
+    Code:
+      stack=4, locals=2, args_size=1
+         0: new           #2                  // class InvokeDynamicComplicated$$Lambda$1
+         3: dup
+         4: lload_0
+         5: invokespecial #19                 // Method "<init>":(J)V
+         8: areturn
+
+  public java.lang.Object apply(java.lang.Object);
+    descriptor: (Ljava/lang/Object;)Ljava/lang/Object;
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=3, locals=2, args_size=2
+         0: aload_0
+         1: getfield      #15                 // Field arg$1:J
+         4: aload_1
+         5: checkcast     #24                 // class java/lang/Integer
+         8: invokestatic  #30                 // Method InvokeDynamicComplicated.lambda$main$0:(JLjava/lang/Integer;)Ljava/lang/Double;
+        11: areturn
+    RuntimeVisibleAnnotations:
+      0: #22()
+        java.lang.invoke.LambdaForm$Hidden
+}
