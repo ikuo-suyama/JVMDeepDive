@@ -1,0 +1,235 @@
+CompileCommand: print *Fib.fib
+Compiled method (c1)      63   92       2       jit.Fib::fib (27 bytes)
+ total in heap  [0x000000011da82690,0x000000011da82cd8] = 1608
+ relocation     [0x000000011da82808,0x000000011da82860] = 88
+ main code      [0x000000011da82860,0x000000011da82a20] = 448
+ stub code      [0x000000011da82a20,0x000000011da82a90] = 112
+ oops           [0x000000011da82a90,0x000000011da82a98] = 8
+ metadata       [0x000000011da82a98,0x000000011da82aa0] = 8
+ scopes data    [0x000000011da82aa0,0x000000011da82b50] = 176
+ scopes pcs     [0x000000011da82b50,0x000000011da82cd0] = 384
+ dependencies   [0x000000011da82cd0,0x000000011da82cd8] = 8
+Loaded disassembler from /Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home/lib/server/hsdis-amd64.dylib
+----------------------------------------------------------------------
+jit/Fib.fib(I)I  [0x000000011da82860, 0x000000011da82a90]  560 bytes
+[Disassembling for mach='i386:x86-64']
+[Entry Point]
+[Verified Entry Point]
+[Constants]
+  # {method} {0x000000010b2cf418} 'fib' '(I)I' in 'jit/Fib'
+  # parm0:    rsi       = int
+  #           [sp+0x70]  (sp of caller)
+  0x000000011da82860: mov    %eax,-0x14000(%rsp)
+  0x000000011da82867: push   %rbp
+  0x000000011da82868: sub    $0x60,%rsp
+  0x000000011da8286c: movabs $0x10b2cf5c0,%rdi
+  0x000000011da82876: mov    0x18(%rdi),%ebx
+  0x000000011da82879: add    $0x8,%ebx
+  0x000000011da8287c: mov    %ebx,0x18(%rdi)
+  0x000000011da8287f: and    $0x3ff8,%ebx
+  0x000000011da82885: cmp    $0x0,%ebx
+  0x000000011da82888: je     0x000000011da829af  ;*iload_0 {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - jit.Fib::fib@0 (line 10)
+
+  0x000000011da8288e: cmp    $0x0,%esi
+  0x000000011da82891: jle    0x000000011da8299a  ;*ifgt {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - jit.Fib::fib@1 (line 10)
+
+  0x000000011da82897: cmp    $0x1,%esi
+  0x000000011da8289a: je     0x000000011da82985  ;*if_icmpne {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - jit.Fib::fib@8 (line 12)
+
+  0x000000011da828a0: mov    %rsi,%rdi
+  0x000000011da828a3: dec    %edi
+  0x000000011da828a5: cmp    $0x0,%edi
+  0x000000011da828a8: jg     0x000000011da828b8  ;*ifgt {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - jit.Fib::fib@1 (line 10)
+                                                ; - jit.Fib::fib@16 (line 15)
+
+  0x000000011da828ae: mov    $0x0,%edi
+  0x000000011da828b3: jmpq   0x000000011da82909  ;*iload_0 {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - jit.Fib::fib@19 (line 15)
+
+  0x000000011da828b8: cmp    $0x1,%edi
+  0x000000011da828bb: jne    0x000000011da828cb  ;*if_icmpne {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - jit.Fib::fib@8 (line 12)
+                                                ; - jit.Fib::fib@16 (line 15)
+
+  0x000000011da828c1: mov    $0x1,%edi
+  0x000000011da828c6: jmpq   0x000000011da82909  ;*iload_0 {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - jit.Fib::fib@19 (line 15)
+
+  0x000000011da828cb: mov    %esi,0x44(%rsp)
+  0x000000011da828cf: mov    %rdi,%rbx
+  0x000000011da828d2: dec    %ebx
+  0x000000011da828d4: mov    %rbx,%rsi          ;*invokestatic fib {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - jit.Fib::fib@16 (line 15)
+                                                ; - jit.Fib::fib@16 (line 15)
+
+  0x000000011da828d7: mov    %edi,0x40(%rsp)
+  0x000000011da828db: nopl   0x0(%rax)
+  0x000000011da828df: callq  0x000000011da82860  ; ImmutableOopMap{}
+                                                ;*invokestatic fib {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - jit.Fib::fib@16 (line 15)
+                                                ; - jit.Fib::fib@16 (line 15)
+                                                ;   {static_call}
+  0x000000011da828e4: mov    0x40(%rsp),%edi
+  0x000000011da828e8: sub    $0x2,%edi
+  0x000000011da828eb: mov    %rdi,%rsi          ;*invokestatic fib {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - jit.Fib::fib@22 (line 15)
+                                                ; - jit.Fib::fib@16 (line 15)
+
+  0x000000011da828ee: mov    %eax,0x48(%rsp)
+  0x000000011da828f2: nopl   0x0(%rax,%rax,1)
+  0x000000011da828f7: callq  0x000000011da82860  ; ImmutableOopMap{}
+                                                ;*invokestatic fib {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - jit.Fib::fib@22 (line 15)
+                                                ; - jit.Fib::fib@16 (line 15)
+                                                ;   {static_call}
+  0x000000011da828fc: mov    0x48(%rsp),%esi
+  0x000000011da82900: add    %eax,%esi
+  0x000000011da82902: mov    %rsi,%rdi          ;*iload_0 {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - jit.Fib::fib@19 (line 15)
+
+  0x000000011da82905: mov    0x44(%rsp),%esi
+  0x000000011da82909: sub    $0x2,%esi
+  0x000000011da8290c: cmp    $0x0,%esi
+  0x000000011da8290f: jle    0x000000011da82963  ;*ifgt {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - jit.Fib::fib@1 (line 10)
+                                                ; - jit.Fib::fib@22 (line 15)
+
+  0x000000011da82915: cmp    $0x1,%esi
+  0x000000011da82918: jne    0x000000011da82928  ;*if_icmpne {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - jit.Fib::fib@8 (line 12)
+                                                ; - jit.Fib::fib@22 (line 15)
+
+  0x000000011da8291e: mov    $0x1,%esi
+  0x000000011da82923: jmpq   0x000000011da82970  ;*iadd {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - jit.Fib::fib@25 (line 15)
+
+  0x000000011da82928: mov    %edi,0x50(%rsp)
+  0x000000011da8292c: mov    %rsi,%rbx
+  0x000000011da8292f: dec    %ebx
+  0x000000011da82931: mov    %esi,0x4c(%rsp)
+  0x000000011da82935: mov    %rbx,%rsi          ;*invokestatic fib {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - jit.Fib::fib@16 (line 15)
+                                                ; - jit.Fib::fib@22 (line 15)
+
+  0x000000011da82938: nopl   0x0(%rax)
+  0x000000011da8293f: callq  0x000000011da82860  ; ImmutableOopMap{}
+                                                ;*invokestatic fib {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - jit.Fib::fib@16 (line 15)
+                                                ; - jit.Fib::fib@22 (line 15)
+                                                ;   {static_call}
+  0x000000011da82944: mov    0x4c(%rsp),%esi
+  0x000000011da82948: sub    $0x2,%esi
+  0x000000011da8294b: mov    %eax,0x54(%rsp)
+  0x000000011da8294f: callq  0x000000011da82860  ; ImmutableOopMap{}
+                                                ;*invokestatic fib {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - jit.Fib::fib@22 (line 15)
+                                                ; - jit.Fib::fib@22 (line 15)
+                                                ;   {static_call}
+  0x000000011da82954: mov    0x54(%rsp),%esi
+  0x000000011da82958: add    %eax,%esi
+  0x000000011da8295a: mov    0x50(%rsp),%edi
+  0x000000011da8295e: jmpq   0x000000011da82970
+  0x000000011da82963: mov    %edi,0x50(%rsp)
+  0x000000011da82967: mov    $0x0,%esi          ;*iadd {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - jit.Fib::fib@25 (line 15)
+
+  0x000000011da8296c: mov    0x50(%rsp),%edi
+  0x000000011da82970: add    %edi,%esi
+  0x000000011da82972: mov    %rsi,%rax
+  0x000000011da82975: add    $0x60,%rsp
+  0x000000011da82979: pop    %rbp
+  0x000000011da8297a: mov    0x108(%r15),%r10
+  0x000000011da82981: test   %eax,(%r10)        ;   {poll_return}
+  0x000000011da82984: retq                      ;*ireturn {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - jit.Fib::fib@26 (line 15)
+
+  0x000000011da82985: mov    $0x1,%eax
+  0x000000011da8298a: add    $0x60,%rsp
+  0x000000011da8298e: pop    %rbp
+  0x000000011da8298f: mov    0x108(%r15),%r10
+  0x000000011da82996: test   %eax,(%r10)        ;   {poll_return}
+  0x000000011da82999: retq                      ;*ireturn {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - jit.Fib::fib@12 (line 13)
+
+  0x000000011da8299a: mov    $0x0,%eax
+  0x000000011da8299f: add    $0x60,%rsp
+  0x000000011da829a3: pop    %rbp
+  0x000000011da829a4: mov    0x108(%r15),%r10
+  0x000000011da829ab: test   %eax,(%r10)        ;   {poll_return}
+  0x000000011da829ae: retq   
+  0x000000011da829af: movabs $0x10b2cf418,%r10  ;   {metadata({method} {0x000000010b2cf418} 'fib' '(I)I' in 'jit/Fib')}
+  0x000000011da829b9: mov    %r10,0x8(%rsp)
+  0x000000011da829be: movq   $0xffffffffffffffff,(%rsp)
+  0x000000011da829c6: callq  0x000000011cfba400  ; ImmutableOopMap{}
+                                                ;*synchronization entry
+                                                ; - jit.Fib::fib@-1 (line 10)
+                                                ;   {runtime_call counter_overflow Runtime1 stub}
+  0x000000011da829cb: jmpq   0x000000011da8288e
+  0x000000011da829d0: nop
+  0x000000011da829d1: nop
+  0x000000011da829d2: mov    0x420(%r15),%rax
+  0x000000011da829d9: movabs $0x0,%r10
+  0x000000011da829e3: mov    %r10,0x420(%r15)
+  0x000000011da829ea: movabs $0x0,%r10
+  0x000000011da829f4: mov    %r10,0x428(%r15)
+  0x000000011da829fb: add    $0x60,%rsp
+  0x000000011da829ff: pop    %rbp
+  0x000000011da82a00: jmpq   0x000000011cfb5480  ;   {runtime_call unwind_exception Runtime1 stub}
+  0x000000011da82a05: hlt    
+  0x000000011da82a06: hlt    
+  0x000000011da82a07: hlt    
+  0x000000011da82a08: hlt    
+  0x000000011da82a09: hlt    
+  0x000000011da82a0a: hlt    
+  0x000000011da82a0b: hlt    
+  0x000000011da82a0c: hlt    
+  0x000000011da82a0d: hlt    
+  0x000000011da82a0e: hlt    
+  0x000000011da82a0f: hlt    
+  0x000000011da82a10: hlt    
+  0x000000011da82a11: hlt    
+  0x000000011da82a12: hlt    
+  0x000000011da82a13: hlt    
+  0x000000011da82a14: hlt    
+  0x000000011da82a15: hlt    
+  0x000000011da82a16: hlt    
+  0x000000011da82a17: hlt    
+  0x000000011da82a18: hlt    
+  0x000000011da82a19: hlt    
+  0x000000011da82a1a: hlt    
+  0x000000011da82a1b: hlt    
+  0x000000011da82a1c: hlt    
+  0x000000011da82a1d: hlt    
+  0x000000011da82a1e: hlt    
+  0x000000011da82a1f: hlt    
+[Stub Code]
+  0x000000011da82a20: nopl   0x0(%rax,%rax,1)   ;   {no_reloc}
+  0x000000011da82a25: movabs $0x0,%rbx          ;   {static_stub}
+  0x000000011da82a2f: jmpq   0x000000011da82a2f  ;   {runtime_call}
+  0x000000011da82a34: nop
+  0x000000011da82a35: movabs $0x0,%rbx          ;   {static_stub}
+  0x000000011da82a3f: jmpq   0x000000011da82a3f  ;   {runtime_call}
+  0x000000011da82a44: nop
+  0x000000011da82a45: movabs $0x0,%rbx          ;   {static_stub}
+  0x000000011da82a4f: jmpq   0x000000011da82a4f  ;   {runtime_call}
+  0x000000011da82a54: nop
+  0x000000011da82a55: movabs $0x0,%rbx          ;   {static_stub}
+  0x000000011da82a5f: jmpq   0x000000011da82a5f  ;   {runtime_call}
+[Exception Handler]
+  0x000000011da82a64: callq  0x000000011cfb7a80  ;   {runtime_call handle_exception_from_callee Runtime1 stub}
+  0x000000011da82a69: movabs $0x10851d493,%rdi  ;   {external_word}
+  0x000000011da82a73: and    $0xfffffffffffffff0,%rsp
+  0x000000011da82a77: callq  0x0000000108281808  ;   {runtime_call MacroAssembler::debug64(char*, long long, long long*)}
+  0x000000011da82a7c: hlt    
+[Deopt Handler Code]
+  0x000000011da82a7d: movabs $0x11da82a7d,%r10  ;   {section_word}
+  0x000000011da82a87: push   %r10
+  0x000000011da82a89: jmpq   0x000000011cef3320  ;   {runtime_call DeoptimizationBlob}
+  0x000000011da82a8e: hlt    
+  0x000000011da82a8f: hlt    
+
+ImmutableOopMap{}pc offsets: 132 156 228 244 363 512559680
