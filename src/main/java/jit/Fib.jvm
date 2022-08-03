@@ -1,0 +1,121 @@
+Classfile /Users/ikuo.suyama/src/JVMDeepDive/src/main/java/jit/Fib.class
+  Last modified 2022/08/02; size 639 bytes
+  MD5 checksum 29e277a9fcdfc2c2d3caad386b78566b
+  Compiled from "Fib.java"
+public class jit.Fib
+  minor version: 0
+  major version: 55
+  flags: (0x0021) ACC_PUBLIC, ACC_SUPER
+  this_class: #7                          // jit/Fib
+  super_class: #8                         // java/lang/Object
+  interfaces: 0, fields: 0, methods: 3, attributes: 1
+Constant pool:
+   #1 = Methodref          #8.#20         // java/lang/Object."<init>":()V
+   #2 = Methodref          #21.#22        // java/lang/Integer.valueOf:(Ljava/lang/String;)Ljava/lang/Integer;
+   #3 = Methodref          #21.#23        // java/lang/Integer.intValue:()I
+   #4 = Fieldref           #24.#25        // java/lang/System.out:Ljava/io/PrintStream;
+   #5 = Methodref          #7.#26         // jit/Fib.fib:(I)I
+   #6 = Methodref          #27.#28        // java/io/PrintStream.println:(I)V
+   #7 = Class              #29            // jit/Fib
+   #8 = Class              #30            // java/lang/Object
+   #9 = Utf8               <init>
+  #10 = Utf8               ()V
+  #11 = Utf8               Code
+  #12 = Utf8               LineNumberTable
+  #13 = Utf8               main
+  #14 = Utf8               ([Ljava/lang/String;)V
+  #15 = Utf8               fib
+  #16 = Utf8               (I)I
+  #17 = Utf8               StackMapTable
+  #18 = Utf8               SourceFile
+  #19 = Utf8               Fib.java
+  #20 = NameAndType        #9:#10         // "<init>":()V
+  #21 = Class              #31            // java/lang/Integer
+  #22 = NameAndType        #32:#33        // valueOf:(Ljava/lang/String;)Ljava/lang/Integer;
+  #23 = NameAndType        #34:#35        // intValue:()I
+  #24 = Class              #36            // java/lang/System
+  #25 = NameAndType        #37:#38        // out:Ljava/io/PrintStream;
+  #26 = NameAndType        #15:#16        // fib:(I)I
+  #27 = Class              #39            // java/io/PrintStream
+  #28 = NameAndType        #40:#41        // println:(I)V
+  #29 = Utf8               jit/Fib
+  #30 = Utf8               java/lang/Object
+  #31 = Utf8               java/lang/Integer
+  #32 = Utf8               valueOf
+  #33 = Utf8               (Ljava/lang/String;)Ljava/lang/Integer;
+  #34 = Utf8               intValue
+  #35 = Utf8               ()I
+  #36 = Utf8               java/lang/System
+  #37 = Utf8               out
+  #38 = Utf8               Ljava/io/PrintStream;
+  #39 = Utf8               java/io/PrintStream
+  #40 = Utf8               println
+  #41 = Utf8               (I)V
+{
+  public jit.Fib();
+    descriptor: ()V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: return
+      LineNumberTable:
+        line 3: 0
+
+  public static void main(java.lang.String[]);
+    descriptor: ([Ljava/lang/String;)V
+    flags: (0x0009) ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=2, locals=2, args_size=1
+         0: aload_0
+         1: iconst_0
+         2: aaload
+         3: invokestatic  #2                  // Method java/lang/Integer.valueOf:(Ljava/lang/String;)Ljava/lang/Integer;
+         6: invokevirtual #3                  // Method java/lang/Integer.intValue:()I
+         9: istore_1
+        10: getstatic     #4                  // Field java/lang/System.out:Ljava/io/PrintStream;
+        13: iload_1
+        14: invokestatic  #5                  // Method fib:(I)I
+        17: invokevirtual #6                  // Method java/io/PrintStream.println:(I)V
+        20: return
+      LineNumberTable:
+        line 5: 0
+        line 6: 10
+        line 7: 20
+
+  private static int fib(int);
+    descriptor: (I)I
+    flags: (0x000a) ACC_PRIVATE, ACC_STATIC
+    Code:
+      stack=3, locals=1, args_size=1
+         0: iload_0
+         1: ifgt          6
+         4: iconst_0
+         5: ireturn
+         6: iload_0
+         7: iconst_1
+         8: if_icmpne     13
+        11: iconst_1
+        12: ireturn
+        13: iload_0
+        14: iconst_1
+        15: isub
+        16: invokestatic  #5                  // Method fib:(I)I
+        19: iload_0
+        20: iconst_2
+        21: isub
+        22: invokestatic  #5                  // Method fib:(I)I
+        25: iadd
+        26: ireturn
+      LineNumberTable:
+        line 10: 0
+        line 11: 4
+        line 12: 6
+        line 13: 11
+        line 15: 13
+      StackMapTable: number_of_entries = 2
+        frame_type = 6 /* same */
+        frame_type = 6 /* same */
+}
+SourceFile: "Fib.java"
