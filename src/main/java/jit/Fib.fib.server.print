@@ -1,0 +1,205 @@
+CompileCommand: print *Fib.fib
+Compiled method (c2)      71    2             jit.Fib::fib (27 bytes)
+ total in heap  [0x0000000115519c10,0x000000011551a200] = 1520
+ relocation     [0x0000000115519d88,0x0000000115519dc8] = 64
+ main code      [0x0000000115519de0,0x0000000115519ee0] = 256
+ stub code      [0x0000000115519ee0,0x0000000115519f30] = 80
+ oops           [0x0000000115519f30,0x0000000115519f38] = 8
+ metadata       [0x0000000115519f38,0x0000000115519f40] = 8
+ scopes data    [0x0000000115519f40,0x0000000115519fe8] = 168
+ scopes pcs     [0x0000000115519fe8,0x000000011551a198] = 432
+ dependencies   [0x000000011551a198,0x000000011551a1a0] = 8
+ handler table  [0x000000011551a1a0,0x000000011551a200] = 96
+Loaded disassembler from /Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home/lib/server/hsdis-amd64.dylib
+----------------------------------------------------------------------
+jit/Fib.fib(I)I  [0x0000000115519de0, 0x0000000115519f30]  336 bytes
+[Disassembling for mach='i386:x86-64']
+[Entry Point]
+[Verified Entry Point]
+[Constants]
+  # {method} {0x000000013e8b5418} 'fib' '(I)I' in 'jit/Fib'
+  # parm0:    rsi       = int
+  #           [sp+0x30]  (sp of caller)
+  0x0000000115519de0: mov    %eax,-0x14000(%rsp)
+  0x0000000115519de7: push   %rbp
+  0x0000000115519de8: sub    $0x20,%rsp         ;*synchronization entry
+                                                ; - jit.Fib::fib@-1 (line 10)
+
+  0x0000000115519dec: mov    %esi,(%rsp)
+  0x0000000115519def: test   %esi,%esi
+  0x0000000115519df1: jle    0x0000000115519ea2  ;*ifgt {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - jit.Fib::fib@1 (line 10)
+
+  0x0000000115519df7: cmp    $0x1,%esi
+  0x0000000115519dfa: jne    0x0000000115519e06  ;*if_icmpne {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - jit.Fib::fib@8 (line 12)
+
+  0x0000000115519dfc: mov    $0x1,%eax
+  0x0000000115519e01: jmpq   0x0000000115519e92
+  0x0000000115519e06: mov    %esi,%r11d
+  0x0000000115519e09: add    $0xfffffffd,%r11d  ;*isub {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - jit.Fib::fib@21 (line 15)
+                                                ; - jit.Fib::fib@16 (line 15)
+
+  0x0000000115519e0d: mov    %r11d,0x4(%rsp)
+  0x0000000115519e12: mov    %esi,%r10d
+  0x0000000115519e15: dec    %r10d              ;*isub {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - jit.Fib::fib@15 (line 15)
+
+  0x0000000115519e18: mov    %esi,%ebp
+  0x0000000115519e1a: add    $0xfffffffe,%ebp   ;*isub {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - jit.Fib::fib@15 (line 15)
+                                                ; - jit.Fib::fib@16 (line 15)
+
+  0x0000000115519e1d: test   %r10d,%r10d
+  0x0000000115519e20: jle    0x0000000115519ea6  ;*ifgt {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - jit.Fib::fib@1 (line 10)
+                                                ; - jit.Fib::fib@16 (line 15)
+
+  0x0000000115519e26: cmp    $0x1,%r10d
+  0x0000000115519e2a: jne    0x0000000115519e34  ;*if_icmpne {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - jit.Fib::fib@8 (line 12)
+                                                ; - jit.Fib::fib@16 (line 15)
+
+  0x0000000115519e2c: mov    $0x1,%r10d
+  0x0000000115519e32: jmp    0x0000000115519e5a
+  0x0000000115519e34: mov    %ebp,%esi
+  0x0000000115519e36: mov    %r10d,0x8(%rsp)
+  0x0000000115519e3b: callq  0x0000000115519de0  ; ImmutableOopMap{}
+                                                ;*invokestatic fib {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - jit.Fib::fib@16 (line 15)
+                                                ; - jit.Fib::fib@16 (line 15)
+                                                ;   {static_call}
+  0x0000000115519e40: mov    %ebp,0x8(%rsp)
+  0x0000000115519e44: mov    %eax,%ebp
+  0x0000000115519e46: mov    0x4(%rsp),%esi
+  0x0000000115519e4a: nop
+  0x0000000115519e4b: callq  0x0000000115519de0  ; ImmutableOopMap{}
+                                                ;*invokestatic fib {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - jit.Fib::fib@22 (line 15)
+                                                ; - jit.Fib::fib@16 (line 15)
+                                                ;   {static_call}
+  0x0000000115519e50: mov    %eax,%r10d
+  0x0000000115519e53: add    %ebp,%r10d         ;*iadd {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - jit.Fib::fib@25 (line 15)
+                                                ; - jit.Fib::fib@16 (line 15)
+
+  0x0000000115519e56: mov    0x8(%rsp),%ebp     ;*invokestatic fib {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - jit.Fib::fib@16 (line 15)
+
+  0x0000000115519e5a: test   %ebp,%ebp
+  0x0000000115519e5c: jle    0x0000000115519eab  ;*ifgt {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - jit.Fib::fib@1 (line 10)
+                                                ; - jit.Fib::fib@22 (line 15)
+
+  0x0000000115519e5e: cmp    $0x1,%ebp
+  0x0000000115519e61: jne    0x0000000115519e6a  ;*if_icmpne {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - jit.Fib::fib@8 (line 12)
+                                                ; - jit.Fib::fib@22 (line 15)
+
+  0x0000000115519e63: mov    $0x1,%eax
+  0x0000000115519e68: jmp    0x0000000115519e8f
+  0x0000000115519e6a: mov    %r10d,0x8(%rsp)
+  0x0000000115519e6f: mov    0x4(%rsp),%esi
+  0x0000000115519e73: callq  0x0000000115519de0  ; ImmutableOopMap{}
+                                                ;*invokestatic fib {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - jit.Fib::fib@16 (line 15)
+                                                ; - jit.Fib::fib@22 (line 15)
+                                                ;   {static_call}
+  0x0000000115519e78: mov    %eax,%ebp
+  0x0000000115519e7a: mov    (%rsp),%esi
+  0x0000000115519e7d: add    $0xfffffffc,%esi   ;*isub {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - jit.Fib::fib@21 (line 15)
+                                                ; - jit.Fib::fib@22 (line 15)
+
+  0x0000000115519e80: data16 xchg %ax,%ax
+  0x0000000115519e83: callq  0x0000000115519de0  ; ImmutableOopMap{}
+                                                ;*invokestatic fib {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - jit.Fib::fib@22 (line 15)
+                                                ; - jit.Fib::fib@22 (line 15)
+                                                ;   {static_call}
+  0x0000000115519e88: add    %ebp,%eax          ;*iadd {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - jit.Fib::fib@25 (line 15)
+                                                ; - jit.Fib::fib@22 (line 15)
+
+  0x0000000115519e8a: mov    0x8(%rsp),%r10d    ;*invokestatic fib {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - jit.Fib::fib@22 (line 15)
+
+  0x0000000115519e8f: add    %r10d,%eax         ;*ifgt {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - jit.Fib::fib@1 (line 10)
+                                                ; - jit.Fib::fib@22 (line 15)
+
+  0x0000000115519e92: add    $0x20,%rsp
+  0x0000000115519e96: pop    %rbp
+  0x0000000115519e97: mov    0x108(%r15),%r10
+  0x0000000115519e9e: test   %eax,(%r10)        ;   {poll_return}
+  0x0000000115519ea1: retq   
+  0x0000000115519ea2: xor    %eax,%eax
+  0x0000000115519ea4: jmp    0x0000000115519e92
+  0x0000000115519ea6: xor    %r10d,%r10d
+  0x0000000115519ea9: jmp    0x0000000115519e5a
+  0x0000000115519eab: xor    %eax,%eax
+  0x0000000115519ead: jmp    0x0000000115519e8f  ;*invokestatic fib {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - jit.Fib::fib@16 (line 15)
+                                                ; - jit.Fib::fib@16 (line 15)
+
+  0x0000000115519eaf: mov    %rax,%rsi
+  0x0000000115519eb2: jmp    0x0000000115519ec1  ;*invokestatic fib {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - jit.Fib::fib@22 (line 15)
+                                                ; - jit.Fib::fib@16 (line 15)
+
+  0x0000000115519eb4: mov    %rax,%rsi
+  0x0000000115519eb7: jmp    0x0000000115519ec1  ;*invokestatic fib {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - jit.Fib::fib@16 (line 15)
+                                                ; - jit.Fib::fib@22 (line 15)
+
+  0x0000000115519eb9: mov    %rax,%rsi
+  0x0000000115519ebc: jmp    0x0000000115519ec1  ;*invokestatic fib {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - jit.Fib::fib@22 (line 15)
+                                                ; - jit.Fib::fib@22 (line 15)
+
+  0x0000000115519ebe: mov    %rax,%rsi          ;*invokestatic fib {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - jit.Fib::fib@22 (line 15)
+                                                ; - jit.Fib::fib@16 (line 15)
+
+  0x0000000115519ec1: add    $0x20,%rsp
+  0x0000000115519ec5: pop    %rbp
+  0x0000000115519ec6: jmpq   0x0000000115516500  ;   {runtime_call _rethrow_Java}
+  0x0000000115519ecb: hlt    
+  0x0000000115519ecc: hlt    
+  0x0000000115519ecd: hlt    
+  0x0000000115519ece: hlt    
+  0x0000000115519ecf: hlt    
+  0x0000000115519ed0: hlt    
+  0x0000000115519ed1: hlt    
+  0x0000000115519ed2: hlt    
+  0x0000000115519ed3: hlt    
+  0x0000000115519ed4: hlt    
+  0x0000000115519ed5: hlt    
+  0x0000000115519ed6: hlt    
+  0x0000000115519ed7: hlt    
+  0x0000000115519ed8: hlt    
+  0x0000000115519ed9: hlt    
+  0x0000000115519eda: hlt    
+  0x0000000115519edb: hlt    
+  0x0000000115519edc: hlt    
+  0x0000000115519edd: hlt    
+  0x0000000115519ede: hlt    
+  0x0000000115519edf: hlt    
+[Stub Code]
+  0x0000000115519ee0: movabs $0x0,%rbx          ;   {no_reloc}
+  0x0000000115519eea: jmpq   0x0000000115519eea  ;   {runtime_call}
+  0x0000000115519eef: movabs $0x0,%rbx          ;   {static_stub}
+  0x0000000115519ef9: jmpq   0x0000000115519ef9  ;   {runtime_call}
+  0x0000000115519efe: movabs $0x0,%rbx          ;   {static_stub}
+  0x0000000115519f08: jmpq   0x0000000115519f08  ;   {runtime_call}
+  0x0000000115519f0d: movabs $0x0,%rbx          ;   {static_stub}
+  0x0000000115519f17: jmpq   0x0000000115519f17  ;   {runtime_call}
+[Exception Handler]
+  0x0000000115519f1c: jmpq   0x0000000115510e00  ;   {runtime_call ExceptionBlob}
+[Deopt Handler Code]
+  0x0000000115519f21: callq  0x0000000115519f26
+  0x0000000115519f26: subq   $0x5,(%rsp)
+  0x0000000115519f2b: jmpq   0x00000001154db320  ;   {runtime_call DeoptimizationBlob}
+
+ImmutableOopMap{}pc offsets: 96 112 152 168 512559680
