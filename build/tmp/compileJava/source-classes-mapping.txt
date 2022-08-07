@@ -1,0 +1,41 @@
+invoke/dynamic/InvokeDynamicFunction.java
+ invoke.dynamic.InvokeDynamicFunction
+ invoke.dynamic.InvokeDynamicFunction$Sam
+invoke/dynamic/InvokeDynamic.java
+ invoke.dynamic.InvokeDynamic
+jit/Fib.java
+ jit.Fib
+invoke/others/performance/ConstantCallSite.java
+ invoke.others.performance.ConstantCallSite
+invoke/dynamic/InvokeDynamicSimple.java
+ invoke.dynamic.InvokeDynamicSimple
+invoke/others/MethodInvoc.java
+ invoke.others.MethodInvoc
+invoke/dynamic/InvokeLambdaByHandler.java
+ invoke.dynamic.InvokeLambdaByHandler
+innerclass/InnerClassTest.java
+ innerclass.InnerClassTest
+invoke/dynamic/InvokeDynamicWait.java
+ invoke.dynamic.InvokeDynamicWait
+invoke/dynamic/InvokeDynamicStackTrace.java
+ invoke.dynamic.InvokeDynamicStackTrace
+invoke/dynamic/InvokeViaCallSite.java
+ invoke.dynamic.InvokeViaCallSite
+invoke/others/performance/MutableCallSite.java
+ invoke.others.performance.MutableCallSite
+invoke/others/Invokes.java
+ invoke.others.IInvoke
+ invoke.others.Invokes
+invoke/dynamic/StaticFields.java
+ invoke.dynamic.StaticFields
+jit/PolymorphismTest.java
+ jit.PolymorphismTest
+ jit.PolymorphismTest$Coin
+ jit.PolymorphismTest$Dime
+ jit.PolymorphismTest$Nickel
+ jit.PolymorphismTest$Qurter
+invoke/dynamic/InvokeDynamicComplicatedWithType.java
+ invoke.dynamic.InvokeDynamicComplicatedWithType
+ invoke.dynamic.InvokeDynamicComplicatedWithType$SAM
+invoke/dynamic/InvokeDynamicComplicated.java
+ invoke.dynamic.InvokeDynamicComplicated
